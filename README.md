@@ -20,5 +20,10 @@
 - **Nombre**: Juan Felipe Guevara Olaya
 - **Correo electrónico**: felipe.guevara.o.1211@gmail.com
 - **Institución**: Universidad Distrital Francisco Jose de Caldas
+
+## Cómo Navegar
+
+- [Ir a la carpeta `jupyter`](./Jupyter/README.md)
+- [Ir a la carpeta `apps`](./apps/README.md
   
 ¡Gracias por visitar mi repositorio! 😊
