@@ -24,6 +24,6 @@
 ## Cómo Navegar
 
 - [Ir a la carpeta `jupyter`](./Jupyter/README.md)
-- [Ir a la carpeta `apps`](./apps/README.md
+- [Ir a la carpeta `apps`](./apps/README.md)
   
 ¡Gracias por visitar mi repositorio! 😊
