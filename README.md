@@ -7,13 +7,19 @@
 
 ## Estructura del Repositorio
 
-📁 repositorio/    
-├── 📁 jupyter/                    # Aprendizaje de lenguajes de programación    
-│   ├── 📁 C/                
-│   ├── 📁 Java/              
-│   ├── 📁 JavaScript/     
-│   └── 📁 Python/           
+```plaintext
+📁 PROYECTOS-PERSONALES/    
+├── 📁 jupyter/    
+|    ├── 📁 SQL/             # Bases de datos usadas en el libro de SQL
+│    |    ├── 📁 sqlite/                # Carpeta para SQLite
+│    │         ├── 📄 mi_base_de_datos.db # Archivo de la base de datos SQLite
+│    |
+|    ├── 📄 git/                        # Aprendizaje y Git
+|    ├── 📄 java/                       # Aprendizaje y Java    
+|    ├── 📄 javascript/                 # Aprendizaje y JavaScript
+|    ├── 📄 sql/                        # Aprendizaje y SQL         
 └── 📁 apps/                       # Aplicaciones basadas en APIs
+```
 
 ## Información Personal
 
