@@ -18,13 +18,13 @@ Esta carpeta contiene mis notas, ejemplos y proyectos relacionados con el aprend
 ```plaintext
 📁 jupyter/    
 ├── 📁 SQL/                       # Bases de datos usadas en el libro de SQL
-│   ├── 📁 sqlite/                # Carpeta para SQLite
-│   │   ├── 📄 mi_base_de_datos.db # Archivo de la base de datos SQLite
+│   └── 📁 sqlite/                # Carpeta para SQLite
+│       └── 📄 mi_base_de_datos.db # Archivo de la base de datos SQLite
 │
 ├── 📄 git/                        # Aprendizaje y Git
 ├── 📄 java/                       # Aprendizaje y Java    
 ├── 📄 javascript/                 # Aprendizaje y JavaScript
-├── 📄 sql/                        # Aprendizaje y SQL 
+└── 📄 sql/                        # Aprendizaje y SQL 
 ```
 
 ## Cómo Navegar

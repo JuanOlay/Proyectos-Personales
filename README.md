@@ -11,16 +11,19 @@
 📁 PROYECTOS-PERSONALES/    
 ├── 📁 jupyter/    
 |    ├── 📁 SQL/             # Bases de datos usadas en el libro de SQL
-│    |    ├── 📁 sqlite/                # Carpeta para SQLite
-│    │         ├── 📄 mi_base_de_datos.db # Archivo de la base de datos SQLite
+│    |    └── 📁 sqlite/                # Carpeta para SQLite
+│    │         └── 📄 mi_base_de_datos.db # Archivo de la base de datos SQLite
 │    |
 |    ├── 📄 git/                        # Aprendizaje y Git
 |    ├── 📄 java/                       # Aprendizaje y Java    
 |    ├── 📄 javascript/                 # Aprendizaje y JavaScript
-|    ├── 📄 sql/                        # Aprendizaje y SQL         
-└── 📁 apps/                       # Aplicaciones basadas en APIs
+|    └── 📄 sql/                        # Aprendizaje y SQL         
+└──📁 apps/                       # Aplicaciones basadas en APIs
+    └── 📁 spotify-plus             # Aplicación Spotify PLUS
+        ├── 📁 code                  # Código de la aplicación
+        └── 📁 docs                 # Documentación de la aplicación
 ```
-
+ 
 ## Información Personal
 
 - **Nombre**: Juan Felipe Guevara Olaya
