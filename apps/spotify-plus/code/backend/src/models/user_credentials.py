@@ -5,14 +5,15 @@ Author: yo
 """
 from sqlalchemy import Column, Integer, String, ForeignKey
 from sqlalchemy.orm import relationship
-from src.databases import Base # pylint: disable=import-error
+from ..databases import Base # pylint: disable=import-error
 
 class UserCredentials(Base):
     """
     This class represents the user credentials model
     """
     __tablename__ = "user_credentials"
-
+    __table_args__ = {'extend_existing': True}  # Permite redefinir la tabla
+    
     id = Column(Integer, primary_key=True, index=True)
     user_id = Column(Integer, ForeignKey("users.id"), unique=True, nullable=False)
     email = Column(String, unique=True, nullable=False)

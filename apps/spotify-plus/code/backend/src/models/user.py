@@ -5,13 +5,14 @@ Author: yo
 """
 from sqlalchemy import Column, Integer, String
 from sqlalchemy.orm import relationship
-from src.databases import Base # pylint: disable=import-error
+from ..databases import Base # pylint: disable=import-error
 
 class User (Base):
 
     """This class represents the user model"""
     __tablename__ = 'users'
-
+    __table_args__ = {'extend_existing': True}  # Permite redefinir la tabla
+    
     id = Column(Integer, primary_key=True)
     username = Column(String)
     email = Column(String, unique=True, nullable=False)
