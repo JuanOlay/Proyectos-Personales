@@ -12,14 +12,15 @@ class User (Base):
     """This class represents the user model"""
     __tablename__ = 'users'
     __table_args__ = {'extend_existing': True}  # Permite redefinir la tabla
-    
-    id = Column(Integer, primary_key=True)
+
+    user_id = Column(Integer, primary_key=True)
     username = Column(String)
     email = Column(String, unique=True, nullable=False)
     password = Column(String, nullable=False)
 
-    songs = relationship('Song', back_populates='user_creator')
+    created_songs = relationship('Song', back_populates='creator')
     credentials = relationship("UserCredentials", uselist=False, back_populates="user")
+    created_playlists = relationship("Playlist", back_populates="creator")
 
     def __init__(self, username : str, email: str, password: str):
         """

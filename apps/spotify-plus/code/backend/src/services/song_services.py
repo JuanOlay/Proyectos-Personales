@@ -4,7 +4,7 @@ This snippet from apps/spotify-plus/code/backend/src/services/song_services.py:
 Author: yomerito
 """
 from sqlalchemy.orm import Session
-from src.models.song import Song # pylint: disable=import-error
+from ..models import Song # pylint: disable=import-error
 
 class SongService:
     """

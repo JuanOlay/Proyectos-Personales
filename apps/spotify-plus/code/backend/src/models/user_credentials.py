@@ -13,8 +13,8 @@ class UserCredentials(Base):
     """
     __tablename__ = "user_credentials"
     __table_args__ = {'extend_existing': True}  # Permite redefinir la tabla
-    
-    id = Column(Integer, primary_key=True, index=True)
+
+    credentials_id = Column(Integer, primary_key=True, index=True)
     user_id = Column(Integer, ForeignKey("users.id"), unique=True, nullable=False)
     email = Column(String, unique=True, nullable=False)
     password = Column(String, nullable=False)

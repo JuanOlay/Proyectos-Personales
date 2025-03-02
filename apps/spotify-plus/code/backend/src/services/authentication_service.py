@@ -2,8 +2,7 @@
 This module contains the authentication service.
 """
 from sqlalchemy.orm import Session
-from src.models.user import User # pylint: disable=import-error
-from src.models.user_credentials import UserCredentials # pylint: disable=import-error
+from ..models import User, UserCredentials
 
 class AuthenticationService:
     """
