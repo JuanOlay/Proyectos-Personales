@@ -1,2 +1,2 @@
-"""Module exposition"""
-from .databases import Base, engine, SessionLocal #pylint: disable=unused-import, import-error
+"""Model exposure"""
+from .databases import Base, engine, get_db, SessionLocal # pylint: disable=unused-import

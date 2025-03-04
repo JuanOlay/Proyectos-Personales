@@ -1,1 +1,7 @@
 code/backend/tests/*
+code/backend/src/__pycache__/
+code/backend/src/.pytest_cache/
+code/backend/.pytest_cache/
+code/backend/src/models/__pycache__/
+code/backend/src/models/.pytest_cache/
+code/backend/src/services/__pycache__/
