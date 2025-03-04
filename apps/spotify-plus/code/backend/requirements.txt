@@ -1,3 +1,5 @@
 sqlalchemy
 pydantic
 werkzeug
+python-vlc
+mutagen

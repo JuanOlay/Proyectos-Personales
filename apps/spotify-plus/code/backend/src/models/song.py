@@ -19,6 +19,7 @@ class Song(Base):
 
     song_id = Column(Integer, primary_key=True)
     song_title = Column(String, nullable=False)
+    song_data = Column(String, nullable=False)
     artist = Column(String, nullable=False)
     album_id = Column(Integer, ForeignKey("albums.album_id"))
     duration = Column(Integer)
