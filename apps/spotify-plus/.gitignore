@@ -1,4 +1,4 @@
-code/backend/tests/*
+code/backend/tests/__pycache__/
 code/backend/src/__pycache__/
 code/backend/src/.pytest_cache/
 code/backend/.pytest_cache/

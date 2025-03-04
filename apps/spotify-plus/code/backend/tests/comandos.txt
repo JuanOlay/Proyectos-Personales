@@ -1,0 +1,5 @@
+Comandos para correr los tests
+
+cd apps/spotify-plus/code/backend
+$env:PYTHONPATH = "C:\Users\familia\Documents\GitHub\Proyectos-Personales\apps\spotify-plus\code\backend"
+pytest 
