@@ -13,30 +13,15 @@ class History(Base):
     This class represents the history model
     """
     __tablename__ = 'history'
-    __table_args__ = {'extend_existing': True}
+    __table_args__ = {'extend_existing': True} # eliminar cuando se haga el main.py
 
     history_id = Column(Integer, primary_key=True)
-    user_id = Column(Integer, ForeignKey("users.user_id"))
-    song_id = Column(Integer, ForeignKey("songs.song_id"))
+    user_id = Column(Integer, ForeignKey("users.user_id"), nullable=False)
+    song_id = Column(Integer, ForeignKey("songs.song_id"), nullable=False)
     played_at = Column(DateTime, default=datetime.now)
 
     user = relationship("User", back_populates="history")
     song = relationship("Song", back_populates="history")
-
-    """
-    def __init__(self, user_id, song_id):
-        
-        # Constructor for the History model
-        #
-        # Args:
-        #     user_id (int): The id of the user who played the song
-        #     song_id (int): The id of the song that was played
-        #
-
-        self.user_id = user_id
-        self.song_id = song_id
-        self.played_at = datetime.now()
-    """
 
     def __repr__(self):
         """

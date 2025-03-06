@@ -3,9 +3,10 @@ This is the Queue model. It is used to store the queue of songs that are to be p
 
 Author: yo"""
 from sqlalchemy import Column, Integer, ForeignKey, Table, Boolean
-from sqlalchemy.orm import relationship # pylint: disable=
+from sqlalchemy.orm import relationship
 from ..databases import Base
 
+# tabla intermedia para la relación muchos a muchos entre Queue y Song
 queue_song_association = Table(
     'queue_song_association',
     Base.metadata,
@@ -20,7 +21,11 @@ class Queue(Base):
     __table_args__ = {'extend_existing': True}
 
     queue_id = Column(Integer, primary_key=True)
-    user_id = Column(Integer, ForeignKey("users.user_id"), nullable=True)
+    user_id = Column(
+        Integer,
+        ForeignKey("users.user_id"),
+        nullable=False
+        ) # user_id es requerido por ahora
     playlist_id = Column(Integer, ForeignKey("playlists.playlist_id"), nullable=True)
     current_song_id = Column(Integer, ForeignKey("songs.song_id"), nullable=True)
 
@@ -31,17 +36,6 @@ class Queue(Base):
     playlist = relationship("Playlist", back_populates="queue")
     current_song = relationship("Song", foreign_keys=[current_song_id])
     queue_songs = relationship("Song", secondary=queue_song_association, back_populates="in_queues")
-
-    """
-    def __init__(self, song_id):
-        #
-        # Constructor for the Queue model
-        #
-        # Args:
-        #    song_id (int): The id of the song to be queued
-        
-        self.song_id = song_id
-    """
 
     def __repr__(self):
         """

@@ -4,7 +4,7 @@ This module contains services for the Playlist model.
 Author: yo
 """
 from sqlalchemy.orm import Session
-from ..models import Playlist, Song # pylint: disable=import-error
+from ..models import Playlist, Song
 
 class PlaylistService:
     """

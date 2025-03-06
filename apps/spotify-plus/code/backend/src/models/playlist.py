@@ -37,19 +37,6 @@ class Playlist(Base):
         back_populates="playlists_containing_song"
     )
 
-    """
-    def __init__(self, playlist_name, creator_id):
-        #
-        # Constructor for the Playlist model
-        #
-        # Args:
-        #     playlist_name (str): The name of the playlist
-        #     creator_id (int): The id of the user who created the playlist
-        #
-        self.playlist_name = playlist_name
-        self.creator_id = creator_id
-    """
-
     def __repr__(self):
         """
         Returns the string representation of the Playlist model
