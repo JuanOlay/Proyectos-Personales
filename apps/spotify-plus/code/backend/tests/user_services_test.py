@@ -20,7 +20,7 @@ def tet_register_user(test_db_session: Session):
     assert credentials is not None, "Las credenciales del usuario no se registraron correctamente."
     assert credentials.email == "testuser@gmail.com", "El correo electrónico no coincide."
 
-def test_login(test_db_session: Session):
+def tet_login(test_db_session: Session):
     """Test that a user can log in correctly."""
     user = UserService.login_user(test_db_session, "testuser@gmail.com", "test_password")
     

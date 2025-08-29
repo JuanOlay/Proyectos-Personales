@@ -2,31 +2,32 @@
 # pylint: skip-file
 
 import pytest
+import logging
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
-from src.databases import Base  # Importamos Base para crear las tablas
+from src.databases import Base
+
+# Configuración de logging para que los mensajes se muestren en pytest
+@pytest.fixture(scope="session", autouse=True)
+def configure_logging():
+    logging.basicConfig(level=logging.INFO)
+    yield
 
 # Configuración de la base de datos de prueba
-TEST_DB_URL = "sqlite:///tests/test_db.sqlite"  # Guarda la base de datos en un archivo
+TEST_DB_URL = "sqlite:///tests/test_db.sqlite"
 
 @pytest.fixture(scope="session")
 def test_engine():
-    # Crea el motor de la base de datos de prueba.
-    engine = create_engine(TEST_DB_URL, echo=True)  # Puedes quitar `echo=True` si no quieres logs
-    Base.metadata.create_all(engine)  # Crea las tablas en la BD de prueba
+    engine = create_engine(TEST_DB_URL, echo=True)
+    Base.metadata.create_all(engine)
     yield engine
-    engine.dispose()  # Cierra la conexión después de las pruebas
-
+    engine.dispose()
 
 @pytest.fixture(scope="function")
 def test_db_session(test_engine):
-    # Crea una sesión de base de datos para cada prueba
     TestingSessionLocal = sessionmaker(bind=test_engine)
     session = TestingSessionLocal()
-
-
-
-    yield session  # Devuelve la sesión de prueba
+    yield session
     session.close()
 
 """
